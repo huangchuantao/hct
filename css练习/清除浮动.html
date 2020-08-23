@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.father{
+			width: 700px;
+		}
+		.father .child{
+			width: 200px;
+			height: 200px;
+			background-color: deepskyblue;
+			float: left;
+		}
+		.clear::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+	<body>
+		<div class="father clear"> 
+			<div class="child"></div>
+			<div class="child"></div>
+			<div class="child"></div>
+		</div>
+		<h1>我是html元素</h1>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js插件/vue.js"></script>
+</head>
+
+
+<body>
+    <div id="test1">
+        <h2 v-text='text'></h2>
+        <img :src="imgUrl" alt="">
+        <p v-html="a"></p>
+        firstname:<input type="text" v-model="firstname"><br>
+    lastname:<input type="text" v-model="lastname"><br>
+    fullname:<input type="text" v-model="fullname"><br>
+    </div>
+    
+    <script>
+   
+new Vue({
+    el:'#test1',
+    data:{
+        text: 'andhsdhs',
+        imgUrl: '../img/草莓.jpg',
+        a: '<a href="http://www.baidu.com">aaa</a>',
+        firstname: '',
+        lastname: '',
+    },
+    computed: {
+        fullname(){
+            return this.firstname+ ' '+this.lastname
+        }   
+    },
+})
+</script>
+</body>
+</html>

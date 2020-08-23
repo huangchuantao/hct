@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css"> 
+	body{
+		perspective: 1000px;/*设置透视点*/
+	}
+	    .lifangxiangce{
+	    	width: 200px;
+	    	height: 200px;
+		    margin: 200px auto;
+		    position: relative;
+		    transform-style: preserve-3d;/*保留子元素3d效果*/
+		   /*transform: rotate3d(1,1,1,0deg);*/
+		   transition: all 5s;
+	    }
+	    .lifangxiangce:hover{
+	    	transform: rotate3d(1,1,1,360deg);
+	    }
+		.page{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0.5;/*设置透明度*/
+		}
+		.front{
+			background-image: url(../img/景甜1.jpg);
+			background-size: 100% auto;
+			transform: translateZ(100px);
+			
+		}
+		.behind{
+			background-image: url(../img/景甜2.jpg);
+			background-size: 100% auto;
+			transform: translateZ(-100px);
+		}
+		.right{
+			background-image: url(../img/景甜3.jpg);
+			background-size: auto 100%;
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.left{
+			background-image: url(../img/景甜4.jpg);
+			background-size: auto 100%;
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		
+		.top{
+			background-image: url(../img/景甜5.jpg);
+			background-size: 100% auto;
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.bottom{
+			background-image: url(../img/景甜6.jpg);
+			background-size: 100% auto;
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+	</style>
+	<body>
+		<div class="lifangxiangce">
+		 <div class="page front"></div>
+		 <div class="page behind"></div>
+		 <div class="page left"></div>
+		 <div class="page right"></div>
+		 <div class="page top"></div>
+		<div class="page bottom"></div>
+		</div>
+	</body>
+</html>
